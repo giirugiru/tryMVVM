@@ -1,0 +1,6 @@
+framework module Pods_tryMVVM {
+  umbrella header "Pods-tryMVVM-umbrella.h"
+
+  export *
+  module * { export * }
+}
