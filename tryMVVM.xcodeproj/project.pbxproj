@@ -7,15 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		645E36B23A9632B78E506739 /* Pods_tryMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6445720B23106F68EFFD63CF /* Pods_tryMVVM.framework */; };
 		BAE8C3382744E9510058EC38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE8C3372744E9510058EC38 /* AppDelegate.swift */; };
 		BAE8C33A2744E9510058EC38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE8C3392744E9510058EC38 /* SceneDelegate.swift */; };
 		BAE8C33C2744E9510058EC38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE8C33B2744E9510058EC38 /* ViewController.swift */; };
 		BAE8C33F2744E9510058EC38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE8C33D2744E9510058EC38 /* Main.storyboard */; };
 		BAE8C3412744E9530058EC38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAE8C3402744E9530058EC38 /* Assets.xcassets */; };
 		BAE8C3442744E9530058EC38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE8C3422744E9530058EC38 /* LaunchScreen.storyboard */; };
+		BAE8C34D2744EA8F0058EC38 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE8C34C2744EA8F0058EC38 /* Networking.swift */; };
+		BAE8C35327450BDE0058EC38 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE8C35227450BDE0058EC38 /* User.swift */; };
+		BAE8C35527450C270058EC38 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE8C35427450C270058EC38 /* UserViewModel.swift */; };
+		BAE8C35727450C3F0058EC38 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE8C35627450C3F0058EC38 /* Observer.swift */; };
+		BAE8C35D274510C00058EC38 /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE8C35C274510C00058EC38 /* Email.swift */; };
+		BAE8C3602745111D0058EC38 /* AccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE8C35E2745111D0058EC38 /* AccountListViewController.swift */; };
+		BAE8C3612745111D0058EC38 /* AccountListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE8C35F2745111D0058EC38 /* AccountListViewController.xib */; };
+		BAE8C363274511580058EC38 /* AccountListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE8C362274511580058EC38 /* AccountListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6445720B23106F68EFFD63CF /* Pods_tryMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tryMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D8CC974D344233CD684C007 /* Pods-tryMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tryMVVM.release.xcconfig"; path = "Target Support Files/Pods-tryMVVM/Pods-tryMVVM.release.xcconfig"; sourceTree = "<group>"; };
 		BAE8C3342744E9510058EC38 /* tryMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tryMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE8C3372744E9510058EC38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAE8C3392744E9510058EC38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +35,15 @@
 		BAE8C3402744E9530058EC38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAE8C3432744E9530058EC38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAE8C3452744E9530058EC38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAE8C34C2744EA8F0058EC38 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		BAE8C35227450BDE0058EC38 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BAE8C35427450C270058EC38 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		BAE8C35627450C3F0058EC38 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		BAE8C35C274510C00058EC38 /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
+		BAE8C35E2745111D0058EC38 /* AccountListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewController.swift; sourceTree = "<group>"; };
+		BAE8C35F2745111D0058EC38 /* AccountListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountListViewController.xib; sourceTree = "<group>"; };
+		BAE8C362274511580058EC38 /* AccountListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewModel.swift; sourceTree = "<group>"; };
+		DD888DB7894D17F18DEB9C43 /* Pods-tryMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tryMVVM.debug.xcconfig"; path = "Target Support Files/Pods-tryMVVM/Pods-tryMVVM.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +51,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				645E36B23A9632B78E506739 /* Pods_tryMVVM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		103BE520350A0C7CE5EEA98C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD888DB7894D17F18DEB9C43 /* Pods-tryMVVM.debug.xcconfig */,
+				6D8CC974D344233CD684C007 /* Pods-tryMVVM.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		79AA32DF895D9F1D18117987 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6445720B23106F68EFFD63CF /* Pods_tryMVVM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BAE8C32B2744E9510058EC38 = {
 			isa = PBXGroup;
 			children = (
 				BAE8C3362744E9510058EC38 /* tryMVVM */,
 				BAE8C3352744E9510058EC38 /* Products */,
+				103BE520350A0C7CE5EEA98C /* Pods */,
+				79AA32DF895D9F1D18117987 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +98,93 @@
 			children = (
 				BAE8C3372744E9510058EC38 /* AppDelegate.swift */,
 				BAE8C3392744E9510058EC38 /* SceneDelegate.swift */,
-				BAE8C33B2744E9510058EC38 /* ViewController.swift */,
+				BAE8C34B2744EA7F0058EC38 /* Helpers */,
+				BAE8C3582745105D0058EC38 /* Account */,
+				BAE8C34E27450B4A0058EC38 /* Main */,
 				BAE8C33D2744E9510058EC38 /* Main.storyboard */,
 				BAE8C3402744E9530058EC38 /* Assets.xcassets */,
 				BAE8C3422744E9530058EC38 /* LaunchScreen.storyboard */,
 				BAE8C3452744E9530058EC38 /* Info.plist */,
 			);
 			path = tryMVVM;
+			sourceTree = "<group>";
+		};
+		BAE8C34B2744EA7F0058EC38 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BAE8C34C2744EA8F0058EC38 /* Networking.swift */,
+				BAE8C35627450C3F0058EC38 /* Observer.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BAE8C34E27450B4A0058EC38 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BAE8C34F27450B540058EC38 /* Model */,
+				BAE8C35027450B5A0058EC38 /* View */,
+				BAE8C35127450B620058EC38 /* ViewModel */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BAE8C34F27450B540058EC38 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BAE8C35227450BDE0058EC38 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BAE8C35027450B5A0058EC38 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BAE8C33B2744E9510058EC38 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BAE8C35127450B620058EC38 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BAE8C35427450C270058EC38 /* UserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BAE8C3582745105D0058EC38 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				BAE8C3592745109A0058EC38 /* Model */,
+				BAE8C35A274510A60058EC38 /* View */,
+				BAE8C35B274510AC0058EC38 /* ViewModel */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		BAE8C3592745109A0058EC38 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BAE8C35C274510C00058EC38 /* Email.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BAE8C35A274510A60058EC38 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BAE8C35E2745111D0058EC38 /* AccountListViewController.swift */,
+				BAE8C35F2745111D0058EC38 /* AccountListViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BAE8C35B274510AC0058EC38 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BAE8C362274511580058EC38 /* AccountListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +194,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAE8C3482744E9530058EC38 /* Build configuration list for PBXNativeTarget "tryMVVM" */;
 			buildPhases = (
+				D4AF44A981FD5B27F1E6AF56 /* [CP] Check Pods Manifest.lock */,
 				BAE8C3302744E9510058EC38 /* Sources */,
 				BAE8C3312744E9510058EC38 /* Frameworks */,
 				BAE8C3322744E9510058EC38 /* Resources */,
+				B44AB2F885DA636B0EF3AF73 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,11 +249,54 @@
 			files = (
 				BAE8C3442744E9530058EC38 /* LaunchScreen.storyboard in Resources */,
 				BAE8C3412744E9530058EC38 /* Assets.xcassets in Resources */,
+				BAE8C3612745111D0058EC38 /* AccountListViewController.xib in Resources */,
 				BAE8C33F2744E9510058EC38 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B44AB2F885DA636B0EF3AF73 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tryMVVM/Pods-tryMVVM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tryMVVM/Pods-tryMVVM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tryMVVM/Pods-tryMVVM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4AF44A981FD5B27F1E6AF56 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tryMVVM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BAE8C3302744E9510058EC38 /* Sources */ = {
@@ -139,8 +304,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAE8C33C2744E9510058EC38 /* ViewController.swift in Sources */,
+				BAE8C35527450C270058EC38 /* UserViewModel.swift in Sources */,
 				BAE8C3382744E9510058EC38 /* AppDelegate.swift in Sources */,
 				BAE8C33A2744E9510058EC38 /* SceneDelegate.swift in Sources */,
+				BAE8C35327450BDE0058EC38 /* User.swift in Sources */,
+				BAE8C3602745111D0058EC38 /* AccountListViewController.swift in Sources */,
+				BAE8C35727450C3F0058EC38 /* Observer.swift in Sources */,
+				BAE8C35D274510C00058EC38 /* Email.swift in Sources */,
+				BAE8C363274511580058EC38 /* AccountListViewModel.swift in Sources */,
+				BAE8C34D2744EA8F0058EC38 /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +456,7 @@
 		};
 		BAE8C3492744E9530058EC38 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD888DB7894D17F18DEB9C43 /* Pods-tryMVVM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +485,7 @@
 		};
 		BAE8C34A2744E9530058EC38 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D8CC974D344233CD684C007 /* Pods-tryMVVM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
