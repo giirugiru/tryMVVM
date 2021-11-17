@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AccountListViewController: UIViewController {
+final class AccountListViewController: UIViewController {
   
   @IBOutlet weak var accountTableView: UITableView!
   
@@ -18,6 +18,7 @@ class AccountListViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     accountTableView.dataSource = self
+    accountTableView.delegate = self
     setupObserver()
     getAccountList()
   }
@@ -43,9 +44,20 @@ class AccountListViewController: UIViewController {
       }
     }
   }
+  
+  fileprivate func postAccount(param: Account){
+    viewModel.postAccount(param: param) { result in
+      switch result{
+      case.success(let response):
+        print (response)
+      case .failure(let error):
+        print(error.localizedDescription)
+      }
+    }
+  }
 }
 
-extension AccountListViewController: UITableViewDataSource {
+extension AccountListViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return observableViewModel.accounts.value?.count ?? 0
   }
@@ -56,6 +68,11 @@ extension AccountListViewController: UITableViewDataSource {
     cell.textLabel?.text = model?.username
     cell.detailTextLabel?.text = model?.email
     return cell
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    guard let model = observableViewModel.accounts.value?[indexPath.row] else { return }
+    postAccount(param: model)
   }
   
 }

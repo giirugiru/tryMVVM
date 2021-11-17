@@ -18,7 +18,7 @@
 		BAE8C35327450BDE0058EC38 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE8C35227450BDE0058EC38 /* User.swift */; };
 		BAE8C35527450C270058EC38 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE8C35427450C270058EC38 /* UserViewModel.swift */; };
 		BAE8C35727450C3F0058EC38 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE8C35627450C3F0058EC38 /* Observer.swift */; };
-		BAE8C35D274510C00058EC38 /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE8C35C274510C00058EC38 /* Email.swift */; };
+		BAE8C35D274510C00058EC38 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE8C35C274510C00058EC38 /* Account.swift */; };
 		BAE8C3602745111D0058EC38 /* AccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE8C35E2745111D0058EC38 /* AccountListViewController.swift */; };
 		BAE8C3612745111D0058EC38 /* AccountListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE8C35F2745111D0058EC38 /* AccountListViewController.xib */; };
 		BAE8C363274511580058EC38 /* AccountListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE8C362274511580058EC38 /* AccountListViewModel.swift */; };
@@ -39,7 +39,7 @@
 		BAE8C35227450BDE0058EC38 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BAE8C35427450C270058EC38 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		BAE8C35627450C3F0058EC38 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
-		BAE8C35C274510C00058EC38 /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
+		BAE8C35C274510C00058EC38 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		BAE8C35E2745111D0058EC38 /* AccountListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewController.swift; sourceTree = "<group>"; };
 		BAE8C35F2745111D0058EC38 /* AccountListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountListViewController.xib; sourceTree = "<group>"; };
 		BAE8C362274511580058EC38 /* AccountListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewModel.swift; sourceTree = "<group>"; };
@@ -99,8 +99,7 @@
 				BAE8C3372744E9510058EC38 /* AppDelegate.swift */,
 				BAE8C3392744E9510058EC38 /* SceneDelegate.swift */,
 				BAE8C34B2744EA7F0058EC38 /* Helpers */,
-				BAE8C3582745105D0058EC38 /* Account */,
-				BAE8C34E27450B4A0058EC38 /* Main */,
+				BAE8C36527451BAF0058EC38 /* Features */,
 				BAE8C33D2744E9510058EC38 /* Main.storyboard */,
 				BAE8C3402744E9530058EC38 /* Assets.xcassets */,
 				BAE8C3422744E9530058EC38 /* LaunchScreen.storyboard */,
@@ -165,7 +164,7 @@
 		BAE8C3592745109A0058EC38 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BAE8C35C274510C00058EC38 /* Email.swift */,
+				BAE8C35C274510C00058EC38 /* Account.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,6 +184,15 @@
 				BAE8C362274511580058EC38 /* AccountListViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BAE8C36527451BAF0058EC38 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				BAE8C3582745105D0058EC38 /* Account */,
+				BAE8C34E27450B4A0058EC38 /* Main */,
+			);
+			path = Features;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,7 +318,7 @@
 				BAE8C35327450BDE0058EC38 /* User.swift in Sources */,
 				BAE8C3602745111D0058EC38 /* AccountListViewController.swift in Sources */,
 				BAE8C35727450C3F0058EC38 /* Observer.swift in Sources */,
-				BAE8C35D274510C00058EC38 /* Email.swift in Sources */,
+				BAE8C35D274510C00058EC38 /* Account.swift in Sources */,
 				BAE8C363274511580058EC38 /* AccountListViewModel.swift in Sources */,
 				BAE8C34D2744EA8F0058EC38 /* Networking.swift in Sources */,
 			);

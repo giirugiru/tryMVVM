@@ -44,6 +44,32 @@ class Networking {
     }
   }
   
+  func postRequest<T: Codable>(urlString: String, parameters: Parameters, completion: ((_ result: Result<T, ErrorResult>) -> Void)? = nil) {
+    guard let url = URL(string: urlString) else { return }
+    
+    AF.request(url, method: .post, parameters: parameters, headers: .default).responseJSON { response in
+      
+      // Data nil validation
+      guard let data = response.data, response.error == nil else {
+        completion?(.failure(ErrorResult.dataNil))
+        return
+      }
+      
+      // Logging
+#if DEBUG
+      self.log(data: data, url: urlString)
+#endif
+      
+      // Decoder
+      do {
+        let APIData = try JSONDecoder().decode(T.self, from: data)
+        completion?(.success(APIData))
+      } catch {
+        completion?(.failure(ErrorResult.parsingFailure))
+      }
+    }
+  }
+  
   func log(data: Data, url: String) {
     print("[RESPONSE] -> \(url)")
     guard let object = try? JSONSerialization.jsonObject(with: data, options: []),

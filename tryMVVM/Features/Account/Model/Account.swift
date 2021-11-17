@@ -1,5 +1,5 @@
 //
-//  Email.swift
+//  Account.swift
 //  tryMVVM
 //
 //  Created by Gilang Sinawang on 17/11/21.
@@ -14,4 +14,11 @@ struct Account: Codable {
 
 struct AccountObservable {
   var accounts: Observable<[Account]> = Observable([])
+}
+
+struct PostResponse: Codable {
+  let body: String
+  let id: Int
+  let title: String
+  let userId: String
 }
