@@ -7,30 +7,34 @@
 
 import UIKit
 
+protocol AccountListPresenterProtocol {
+  func sendData(with viewModel: [Account])
+}
+
 final class AccountListViewController: UIViewController {
   
   @IBOutlet weak var accountTableView: UITableView!
   
   private var viewModel = AccountListViewModel()
-  private var observableViewModel = AccountObservable()
+  var accounts: [Account] = [] {
+    didSet {
+      DispatchQueue.main.async {
+        self.accountTableView.reloadData()
+      }
+    }
+  }
   
   // MARK: - LIFECYCLE
   override func viewDidLoad() {
     super.viewDidLoad()
     accountTableView.dataSource = self
     accountTableView.delegate = self
-    setupObserver()
+    viewModel.setupObserver()
     getAccountList()
   }
   
   // MARK: - SETUP
-  fileprivate func setupObserver(){
-    observableViewModel.accounts.bind { [weak self] _ in
-      DispatchQueue.main.async {
-        self?.accountTableView.reloadData()
-      }
-    }
-  }
+
   
   // MARK: - HELPERS
   fileprivate func getAccountList(){
@@ -38,7 +42,7 @@ final class AccountListViewController: UIViewController {
       switch result{
       case .success(let accounts):
         print(accounts)
-        self.observableViewModel.accounts.value = accounts
+        //self.observableViewModel.accounts.value = accounts
       case .failure(let error):
         print(error.localizedDescription)
       }
@@ -49,7 +53,7 @@ final class AccountListViewController: UIViewController {
     viewModel.postAccount(param: param) { result in
       switch result{
       case.success(let response):
-        print (response)
+        print(response)
       case .failure(let error):
         print(error.localizedDescription)
       }
@@ -59,20 +63,28 @@ final class AccountListViewController: UIViewController {
 
 extension AccountListViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return observableViewModel.accounts.value?.count ?? 0
+    return accounts.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
-    let model = observableViewModel.accounts.value?[indexPath.row]
-    cell.textLabel?.text = model?.username
-    cell.detailTextLabel?.text = model?.email
+    let model = accounts[indexPath.row]
+    cell.textLabel?.text = model.username
+    cell.detailTextLabel?.text = model.email
     return cell
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    guard let model = observableViewModel.accounts.value?[indexPath.row] else { return }
+    //guard let model = accounts[indexPath.row] else { return }
+    let model = accounts[indexPath.row]
     postAccount(param: model)
+  }
+  
+}
+
+extension AccountListViewController: AccountListPresenterProtocol {
+  func sendData(with viewModel: [Account]) {
+    accounts = viewModel
   }
   
 }

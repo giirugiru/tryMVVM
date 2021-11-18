@@ -12,10 +12,6 @@ struct Account: Codable {
   let email: String
 }
 
-struct AccountObservable {
-  var accounts: Observable<[Account]> = Observable([])
-}
-
 struct PostResponse: Codable {
   let body: String
   let id: Int
