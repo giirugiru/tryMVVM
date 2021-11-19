@@ -19,12 +19,16 @@ struct AccountObservable {
 
 final class AccountListViewModel: AccountListProtocol {
   
-  private var observableViewModel = AccountObservable()
-  var presenter: AccountListPresenterProtocol?
+  var observableViewModel = AccountObservable()
+  weak var presenter: AccountListPresenterProtocol?
+  
+  init(presenter: AccountListPresenterProtocol) {
+    self.presenter = presenter
+  }
   
   func setupObserver(){
     observableViewModel.accounts.bind { [weak self] _ in
-      self?.presenter?.sendData(with: self?.observableViewModel.accounts.value ?? [])
+      self?.presenter?.layoutData()
     }
   }
   
